@@ -1,0 +1,54 @@
+.container-cadastro {
+    background-color: #ffffed;
+    height: 300px;
+    width: 300px;
+    box-shadow: 1px 1px 4px;
+    border-radius: 8px;
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+    position: relative;
+    padding: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+}
+
+.controle-inputs span{
+    display: block;
+    padding-bottom: 3px;
+}
+
+.controle-inputs {
+    border-radius: 4px;
+    margin: 10px 0;
+}
+
+.controle-inputs input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #333;
+    outline: none;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid transparent;
+    margin-top: 20px;
+    background-color: rgb(33, 150, 43);
+    color: #ffffee;
+    font-size: 16px;
+    opacity: 0.76;
+    transition: 0.5s ease;
+}
+
+form input[type="submit"]:hover {
+    opacity: 1;
+    cursor: pointer;
+    border: 1px solid white;
+}

@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Alatsi", sans-serif;
+    font-weight: 400;
+    font-style: normal;  
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1d456b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    background-color: #ffffed;
+    color: #333;
+    height: 400px;
+    width: 830px;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 1px 1px 6px;
+}
+
+.boxFuncionario {
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid #1d456b;
+    padding: 10px;
+    border-radius: 6px;
+    height: 85%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    box-shadow: 1px 1px 4px;
+}
+
+.material-symbols-outlined {
+    font-size: 50px;
+    padding-top: 20px;
+}
+
+
