@@ -1,3 +1,9 @@
+:root {
+    --Background-color-default: #fafae5;
+    --color-default: #333;
+    --width-default: 300px;
+}
+
 .colorLink {
-    color: #333;
+    color: var(--color-default);
 }

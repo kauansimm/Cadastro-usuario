@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 
-export const useFetch = (url) => {
+export const useFetch = (url, id) => {
     const [dados, setDados] = useState(null)
 
     const [config, setConfig] = useState(null)
     const [method, setMethod] = useState(null)
     const [chamadaFetch, setChamadaFetch] = useState(null)
-
+    const [isDelete, setIsDelete] = useState(false)
     const [loading, setLoading] = useState(false)
     
     const [error, setError] = useState(null)
@@ -15,6 +15,30 @@ export const useFetch = (url) => {
     const httpsConfig = (dados, method) => {
 
         if (method === "POST") {
+            setConfig({
+                method,
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(dados)
+            })
+
+            setMethod(method)
+        }
+
+        if (method === "PUT") {
+            setConfig({
+                method,
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(dados)
+            })
+
+            setMethod(method)
+        }
+
+        if (method === "DELETE") {
             setConfig({
                 method,
                 headers: {
@@ -60,17 +84,42 @@ export const useFetch = (url) => {
             try {
                 if(method === "POST") {
                 
-                setLoading(true)
+                    setLoading(true)
 
-                let fetchOpcoes = [url, config]
+                    let fetchOpcoes = [url, config]
 
-                const res = await fetch(...fetchOpcoes)
+                    const res = await fetch(...fetchOpcoes)
 
-                json = await res.json() 
+                    json = await res.json() 
                 }
+
+                if(method === "PUT") {
+                
+                    setLoading(true)
+
+                    let fetchOpcoes = [`http://localhost:3000/funcionarios/${id}`, config]
+
+                    const res = await fetch(...fetchOpcoes)
+
+                    json = await res.json() 
+                }
+
+                if(method === "DELETE") {
+                
+                    setLoading(true)
+
+                    let fetchOpcoes = [`http://localhost:3000/funcionarios/${id}`, config]
+
+                    console.log(fetchOpcoes)
+
+                    const res = await fetch(...fetchOpcoes)
+
+                    json = await res.json() 
+
+                }
+
             } catch (error) {
                 console.log(error)   
-                setError("Houve um erro! Tente novamente.")
             }
            
 

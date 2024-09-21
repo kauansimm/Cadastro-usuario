@@ -1,0 +1,68 @@
+.container-consulta-funcionario {
+    height: 500px;
+    width: var(--width-default);
+    background-color: var(--Background-color-default);
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px;
+    box-sizing: border-box;
+}
+
+.container-consulta-funcionario h3 {
+    padding: 15px;
+    text-align: center;
+}
+
+#icon-consultar{
+    font-size: 20px;
+    width: 5%;
+    opacity: 0.8;
+}
+
+#icon-consultar:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+ 
+.search {
+    display: flex;
+    justify-content: center;
+}
+
+.search input {
+    width: 90%;
+    margin: 0 15px;
+    padding: 5px;
+    outline: none;
+    color: var(--color-default);
+    border: 1px solid var(--color-default);
+}
+
+.header {
+    width: var(--width-default);
+}
+
+.exibir-funcionarios {
+    margin-top: 20px;
+    overflow: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+#back {
+    width: 10%;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    height: 50px;
+    align-items: center;
+}
+
+.title h3 {
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}

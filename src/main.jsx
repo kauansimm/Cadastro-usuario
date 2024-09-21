@@ -8,6 +8,9 @@ import { CadastroFuncionarioRoute } from './router/CadastroFuncionarioRoute.jsx'
 import { AlterarUsuario } from './components/AlterarUsuario.jsx'
 import { ExcluirFuncionario } from './components/ExcluirFuncionario.jsx'
 import { ConsultarFuncionario } from './components/ConsultarFuncionario.jsx'
+import { AlterarFuncionarioRoute } from './router/AlterarFuncionarioRoute.jsx'
+import { ExcluirFuncionarioRoute } from './router/ExcluirFuncionarioRoute.jsx'
+import { ConsultarFuncionarioRoute } from './router/ConsultarFuncionarioRoute.jsx'
 
 const route = createBrowserRouter([
   {
@@ -24,15 +27,15 @@ const route = createBrowserRouter([
       },
       {
         path: "alterar-funcionario", 
-        element: <AlterarUsuario/>
+        element: <AlterarFuncionarioRoute/>
       },
       {
         path: "excluir-funcionario", 
-        element: <ExcluirFuncionario/>
+        element: <ExcluirFuncionarioRoute/>
       },
       {
         path: "consultar-funcionarios", 
-        element: <ConsultarFuncionario/>
+        element: <ConsultarFuncionarioRoute/>
       },
     ]
   }

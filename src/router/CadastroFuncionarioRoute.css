@@ -1,7 +1,7 @@
 .container-cadastro {
     background-color: #ffffed;
     height: 300px;
-    width: 300px;
+    width: var(--width-default);
     box-shadow: 1px 1px 4px;
     border-radius: 8px;
 }
@@ -9,7 +9,7 @@
 .material-symbols-outlined {
     font-size: 30px;
     position: relative;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 form {
@@ -31,7 +31,7 @@ form {
 .controle-inputs input[type="text"] {
     width: 100%;
     padding: 8px;
-    border: 1px solid #333;
+    border: 1px solid var(--color-default);
     outline: none;
 }
 
@@ -50,5 +50,6 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     opacity: 1;
     cursor: pointer;
-    border: 1px solid white;
+    border: 1px solid var(--color-default);
+    color: var(--color-default);
 }

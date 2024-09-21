@@ -1,0 +1,14 @@
+.dados-funcionario {
+    background-color: #248eff;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid var(--color-default);
+    box-sizing: border-box;
+    box-shadow: 1px 1px 4px;
+}
+
+.dados-funcionario h4 {
+    padding: 4px;
+    color: var(--color-default);
+}

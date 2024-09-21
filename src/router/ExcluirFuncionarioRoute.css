@@ -1,0 +1,12 @@
+.container-excluir {
+    background-color: var(--Background-color-default);
+    height: 230px;
+    width: var(--width-default);
+    border-radius: 8px;
+}
+
+
+#btn-excluir {
+    background-color: rgb(170, 12, 12);
+    border-radius: 4px;
+}

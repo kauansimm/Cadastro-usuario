@@ -1,0 +1,28 @@
+.container-Alterar {
+    background-color: var(--Background-color-default);
+    height: 390px;
+    width: var(--width-default);
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px;
+}
+
+#btn-alterar {
+    background-color: #ddd055;
+    border-radius: 4px;
+}
+
+#btn-alterar:hover {
+    color: var(--color-default);
+    border: 1px solid var(--color-default);
+}
+
+#usuario-encontrado {
+    font-size: 13px;
+    color: rgb(33, 150, 43);
+}
+
+#usuario-nao-encontrado {
+    font-size: 13px;
+    color: rgb(170, 12, 12);
+}
+
