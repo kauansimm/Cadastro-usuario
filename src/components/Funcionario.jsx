@@ -2,7 +2,7 @@ import React from 'react'
 import "./Funcionario.css"
 import { useFetch } from '../hooks/useFetch'
 
-export const Funcionario = () => {
+export const Funcionario = ({id}) => {
 
     const url = "http://localhost:3000/funcionarios"
     const { dados: info, httpsConfig, loading, error} = useFetch(url)

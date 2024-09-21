@@ -49,6 +49,18 @@ export const useFetch = (url, id) => {
 
             setMethod(method)
         }
+
+        if (method === "GET") {
+            setConfig({
+                method,
+                headers: {
+                    "Content-type": "application/json"
+                },
+                body: JSON.stringify(dados)
+            })
+
+            setMethod(method)
+        }
     }
     /// isso aqui faz a "pesquisa" envia os dados do usuario para o server
     useEffect(() => {
@@ -109,6 +121,20 @@ export const useFetch = (url, id) => {
                     setLoading(true)
 
                     let fetchOpcoes = [`http://localhost:3000/funcionarios/${id}`, config]
+
+                    console.log(fetchOpcoes)
+
+                    const res = await fetch(...fetchOpcoes)
+
+                    json = await res.json() 
+
+                }
+
+                if(method === "GET") {
+                
+                    setLoading(true)
+
+                    let fetchOpcoes = [`http://localhost:3000/funcionarios`, config]
 
                     console.log(fetchOpcoes)
 
